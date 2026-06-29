@@ -35,6 +35,18 @@
       color: #d1d5db;
     }
 
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
     textarea {
       width: 100%;
       height: 100%;
@@ -56,9 +68,10 @@
 <body>
   <header>
     <h1>Paste your code here</h1>
-    <p>This page gives you a full-window editor for long code snippets that need to go into <code>index.html</code>.</p>
+    <p>This page gives you a full-window editor for long code snippets that need to go into index.html.</p>
   </header>
-  <textarea spellcheck="false" aria-label="HTML code editor"><!DOCTYPE html>
+  <label class="sr-only" for="html-code-editor">HTML code editor</label>
+  <textarea id="html-code-editor" spellcheck="false" aria-label="HTML code editor"><!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
