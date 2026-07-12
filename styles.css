@@ -1368,3 +1368,22 @@ button:hover ~ body .cursor { width: 18px; height: 18px; background: var(--fire)
   .services-grid { grid-template-columns: 1fr; }
 }
 /* Add site styles here. */
+
+/* ─── PayPal Donate Section ─── */
+.paypal-donate-wrap {
+  margin-top: 48px;
+  text-align: center;
+}
+
+.paypal-donate-label {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  margin-bottom: 20px;
+}
+
+#paypal-button-container {
+  max-width: 340px;
+  margin: 0 auto;
+}
