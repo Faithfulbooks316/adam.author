@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Pharmekia: The Ancient Art of Chemical Sorcery — A presentation by Adam Joseph Hanrahan. The biblical, historical, and modern face of pharmakeia revealed."/>
+  <meta name="keywords" content="pharmekia, pharmakeia, sorcery, spiritual warfare, Adam Hanrahan, FaithfulBooks, Revelation, Galatians, biblical, chemical sorcery"/>
+  <meta property="og:title" content="Pharmekia: The Ancient Art of Chemical Sorcery"/>
+  <meta property="og:description" content="From Babylon to the modern pharmaceutical empire — the 3,000-year unbroken chain of pharmekia exposed."/>
+  <meta property="og:type" content="website"/>
+  <title>Pharmekia: The Ancient Art of Chemical Sorcery | FaithfulBooks Publishing</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet"/>
+
+  <style>
+  /* ═══════════════════════════════════════════════════════
+     PHARMEKIA PRESENTATION — FaithfulBooks Publishing
+     Design tokens mirror the main site (styles.css)
+  ═══════════════════════════════════════════════════════ */
+  :root {
+    --void:      #000000;
+    --gloss:     #080808;
+    --jet:       #0D0D0D;
+    --obsidian:  #131313;
+    --slate:     #1C1C1C;
+    --smoke:     #252525;
+    --graphite:  #323232;
+    --blood:     #6B0000;
+    --crimson:   #990000;
+    --fire:      #C0392B;
+    --ember:     #E74C3C;
+    --gold:      #B8941F;
+    --gold-hi:   #D4AF37;
+    --gold-pale: #E8C96A;
+    --parchment: #EDE0C4;
+    --silver:    #BABABA;
+    --ash:       #6E6E6E;
+    --border:    rgba(184,148,31,.15);
+    --card-bg:   rgba(19,19,19,.95);
+    --font-display: 'Playfair Display SC', Georgia, serif;
+    --font-serif:   'Libre Baskerville', Georgia, serif;
+    --font-caps:    'Cinzel', Georgia, serif;
+    --ease:  cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+  html { font-size:16px; scroll-behavior:smooth; overflow-x:hidden; }
+
+  body {
+    background: var(--void);
+    color: var(--silver);
+    font-family: var(--font-serif);
+    line-height: 1.8;
+    overflow-x: hidden;
+    cursor: none;
+  }
+
+  /* Atmospheric background — same as main site */
+  body::before {
+    content:'';
+    position:fixed; inset:0; pointer-events:none; z-index:0;
+    background:
+      radial-gradient(ellipse 70% 40% at 0% 0%, rgba(107,0,0,.12) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 50% at 100% 100%, rgba(107,0,0,.08) 0%, transparent 60%),
+      linear-gradient(180deg,rgba(255,255,255,.04) 0%,rgba(255,255,255,.01) 15%,transparent 30%),
+      repeating-linear-gradient(180deg,transparent 0px,transparent 3px,rgba(255,255,255,.006) 3px,rgba(255,255,255,.006) 4px);
+  }
+
+  a { color:inherit; text-decoration:none; }
+  button { cursor:none; border:none; background:none; }
+
+  /* ── CUSTOM CURSOR ── */
+  .cursor {
+    position:fixed; width:10px; height:10px;
+    background:var(--gold-hi); border-radius:50%;
+    pointer-events:none; z-index:9999;
+    transform:translate(-50%,-50%);
+    transition:width .15s,height .15s,background .15s;
+    mix-blend-mode:difference;
+  }
+  .cursor-trail {
+    position:fixed; width:32px; height:32px;
+    border:1px solid rgba(184,148,31,.4); border-radius:50%;
+    pointer-events:none; z-index:9998;
+    transform:translate(-50%,-50%);
+    transition:left .1s var(--ease),top .1s var(--ease);
+  }
+
+  /* ── SCROLLBAR ── */
+  ::-webkit-scrollbar { width:5px; }
+  ::-webkit-scrollbar-track { background:var(--gloss); }
+  ::-webkit-scrollbar-thumb { background:var(--blood); border-radius:2px; }
+
+  /* ── NAV ── */
+  nav {
+    position:fixed; top:0; left:0; right:0; z-index:1000;
+    background:rgba(0,0,0,.88);
+    border-bottom:1px solid var(--border);
+    backdrop-filter:blur(12px);
+    transition:all .3s var(--ease);
+  }
+  .nav-inner {
+    max-width:1180px; margin:0 auto; padding:0 32px;
+    display:flex; align-items:center; justify-content:space-between;
+    height:64px;
+  }
+  .nav-logo {
+    font-family:var(--font-caps);
+    font-size:.75rem; letter-spacing:.25em; text-transform:uppercase;
+    color:var(--gold); display:flex; align-items:center; gap:8px;
+  }
+  .nav-logo .logo-mark { color:var(--fire); font-size:1rem; }
+  .nav-links { list-style:none; display:flex; gap:28px; }
+  .nav-links a {
+    font-family:var(--font-caps);
+    font-size:.65rem; letter-spacing:.2em; text-transform:uppercase;
+    color:var(--ash); transition:color .2s;
+  }
+  .nav-links a:hover, .nav-links a.active { color:var(--parchment); }
+  .nav-cta {
+    padding:8px 20px;
+    border:1px solid rgba(184,148,31,.35);
+    color:var(--gold) !important;
+  }
+  .nav-cta:hover { background:rgba(184,148,31,.1); }
+
+  /* ── CONTAINER / SECTION ── */
+  .container { max-width:1180px; margin:0 auto; padding:0 32px; position:relative; z-index:1; }
+  .section { padding:100px 0; position:relative; }
+
+  /* ── TYPOGRAPHY HELPERS ── */
+  .section-label {
+    display:block; font-family:var(--font-caps);
+    font-size:.65rem; letter-spacing:.35em; text-transform:uppercase;
+    color:var(--fire); margin-bottom:14px;
+  }
+  .section-label.centered { text-align:center; }
+  .section-title {
+    font-family:var(--font-display);
+    font-size:clamp(2rem,5vw,3.4rem);
+    color:#fff; line-height:1.1; margin-bottom:28px;
+  }
+  .section-title span { color:var(--fire); }
+  .section-title.centered { text-align:center; }
+  .section-intro {
+    max-width:680px; margin:0 auto 54px;
+    text-align:center; color:var(--ash); font-size:1.05rem;
+  }
+  .prose p { margin-bottom:1.1rem; font-size:1rem; line-height:1.88; }
+  .prose strong { color:var(--parchment); }
+  .prose em { color:var(--gold-pale); font-style:italic; }
+
+  /* ── BUTTONS ── */
+  .btn-primary {
+    display:inline-block; padding:15px 42px;
+    background:linear-gradient(135deg,var(--blood) 0%,var(--crimson) 60%,var(--fire) 100%);
+    color:#fff; font-family:var(--font-caps); font-size:.72rem;
+    letter-spacing:.2em; text-transform:uppercase; border-radius:1px;
+    border:1px solid rgba(231,76,60,.4);
+    box-shadow:0 0 28px rgba(107,0,0,.45),inset 0 1px 0 rgba(255,255,255,.07);
+    transition:all .25s var(--ease);
+  }
+  .btn-primary:hover {
+    transform:translateY(-2px);
+    box-shadow:0 0 50px rgba(153,0,0,.7),0 8px 20px rgba(0,0,0,.5);
+  }
+  .btn-ghost {
+    display:inline-block; padding:14px 38px;
+    background:transparent; color:var(--gold);
+    font-family:var(--font-caps); font-size:.72rem;
+    letter-spacing:.2em; text-transform:uppercase;
+    border:1px solid rgba(184,148,31,.4); border-radius:1px;
+    transition:all .25s var(--ease);
+  }
+  .btn-ghost:hover { background:rgba(184,148,31,.08); transform:translateY(-2px); }
+
+  /* ══════════════════════════════════
+     HERO / TITLE SLIDE
+  ══════════════════════════════════ */
+  .pres-hero {
+    min-height:100vh; display:flex; align-items:center; justify-content:center;
+    text-align:center; position:relative; overflow:hidden;
+    padding-top:80px;
+  }
+  .pres-hero::after {
+    content:''; position:absolute; bottom:0; left:0; right:0; height:200px;
+    background:linear-gradient(transparent,var(--void));
+    pointer-events:none;
+  }
+  .hero-eyebrow {
+    font-family:var(--font-caps); font-size:.65rem;
+    letter-spacing:.45em; text-transform:uppercase;
+    color:var(--fire); margin-bottom:28px; opacity:.9;
+  }
+  .pres-greek {
+    font-size:clamp(3rem,8vw,7rem);
+    font-family:var(--font-display); font-weight:900;
+    color:rgba(255,255,255,.06); letter-spacing:.05em;
+    line-height:1; margin-bottom:-1.2rem; user-select:none;
+  }
+  .pres-title {
+    font-family:var(--font-display); font-weight:900;
+    font-size:clamp(2.8rem,8vw,6.5rem);
+    line-height:1.02; letter-spacing:.02em; color:#fff;
+    margin-bottom:20px; position:relative;
+  }
+  .pres-title .red { color:var(--fire); }
+  .pres-subtitle {
+    font-family:var(--font-serif); font-size:clamp(1rem,2vw,1.3rem);
+    color:var(--gold-pale); font-style:italic; max-width:680px; margin:0 auto 48px;
+    line-height:1.6;
+  }
+  .pres-meta {
+    display:flex; gap:40px; justify-content:center; flex-wrap:wrap;
+    font-family:var(--font-caps); font-size:.6rem; letter-spacing:.3em;
+    text-transform:uppercase; color:var(--ash); margin-bottom:52px;
+  }
+  .pres-meta span { color:var(--gold-pale); }
+  .hero-rule {
+    display:flex; align-items:center; gap:14px;
+    max-width:320px; margin:0 auto 52px;
+  }
+  .hero-rule > span:not(.rule-sym) {
+    flex:1; height:1px;
+    background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  }
+  .rule-sym { color:var(--fire); font-size:1.1rem; }
+  .scroll-cue {
+    position:absolute; bottom:38px; left:50%; transform:translateX(-50%);
+    display:flex; flex-direction:column; align-items:center; gap:8px;
+    font-family:var(--font-caps); font-size:.55rem; letter-spacing:.3em;
+    text-transform:uppercase; color:var(--ash); z-index:2;
+    animation:bounceY 2.5s ease-in-out infinite;
+  }
+  .scroll-line { width:1px; height:32px; background:linear-gradient(var(--fire),transparent); }
+  @keyframes bounceY {
+    0%,100% { transform:translateX(-50%) translateY(0); }
+    50%      { transform:translateX(-50%) translateY(8px); }
+  }
+
+  /* ══════════════════════════════════
+     SLIDE DIVIDER
+  ══════════════════════════════════ */
+  .slide-divider {
+    display:flex; align-items:center; gap:20px;
+    margin:0 auto 60px; max-width:600px;
+  }
+  .slide-divider::before, .slide-divider::after {
+    content:''; flex:1; height:1px;
+    background:linear-gradient(90deg,transparent,var(--border),transparent);
+  }
+  .slide-num {
+    font-family:var(--font-caps); font-size:.6rem;
+    letter-spacing:.35em; text-transform:uppercase; color:var(--fire);
+    white-space:nowrap;
+  }
+
+  /* ══════════════════════════════════
+     SLIDE 1 — DEFINITION
+  ══════════════════════════════════ */
+  .definition-section { background:var(--jet); }
+  .definition-section::before {
+    content:''; position:absolute; inset:0; pointer-events:none;
+    background:radial-gradient(ellipse 60% 40% at 50% 0%,rgba(107,0,0,.1),transparent 70%);
+  }
+  .def-grid {
+    display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:start;
+  }
+  @media(max-width:768px) { .def-grid { grid-template-columns:1fr; gap:40px; } }
+  .def-etymology {
+    border:1px solid var(--border); padding:40px;
+    background:linear-gradient(135deg,rgba(19,19,19,.8),rgba(13,13,13,.9));
+    position:relative;
+  }
+  .def-etymology::before {
+    content:'φαρμακεία';
+    position:absolute; top:-1px; right:20px;
+    font-family:var(--font-display); font-size:.7rem;
+    background:var(--jet); color:var(--fire); padding:0 10px;
+    letter-spacing:.1em;
+  }
+  .greek-word {
+    font-family:var(--font-display); font-size:clamp(2.5rem,5vw,4rem);
+    color:var(--gold-hi); margin-bottom:8px; line-height:1;
+  }
+  .greek-transliteration {
+    font-family:var(--font-caps); font-size:.65rem; letter-spacing:.3em;
+    text-transform:uppercase; color:var(--ash); margin-bottom:20px;
+  }
+  .greek-def {
+    font-size:1.05rem; color:var(--parchment); font-style:italic;
+    border-left:2px solid var(--fire); padding-left:20px;
+    margin-bottom:20px; line-height:1.7;
+  }
+  .greek-root-list { list-style:none; }
+  .greek-root-list li {
+    padding:10px 0; border-bottom:1px solid rgba(184,148,31,.1);
+    display:flex; gap:14px; align-items:flex-start;
+    font-size:.92rem; color:var(--silver);
+  }
+  .greek-root-list li:last-child { border-bottom:none; }
+  .root-word { font-family:var(--font-display); color:var(--gold-pale); min-width:130px; }
+
+  .verse-stack { display:flex; flex-direction:column; gap:24px; }
+  .verse-card {
+    border:1px solid var(--border); padding:28px;
+    background:var(--card-bg); position:relative;
+    transition:border-color .25s;
+  }
+  .verse-card:hover { border-color:rgba(192,57,43,.5); }
+  .verse-ref {
+    font-family:var(--font-caps); font-size:.6rem; letter-spacing:.3em;
+    text-transform:uppercase; color:var(--fire); margin-bottom:12px;
+  }
+  .verse-text {
+    font-size:1rem; color:var(--parchment); font-style:italic;
+    line-height:1.7; margin-bottom:12px;
+  }
+  .verse-note { font-size:.85rem; color:var(--ash); }
+  .verse-note strong { color:var(--gold-pale); }
+
+  /* ══════════════════════════════════
+     SLIDE 2 — ANCIENT ROOTS
+  ══════════════════════════════════ */
+  .roots-section {}
+  .roots-grid {
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:28px;
+  }
+  .root-card {
+    border:1px solid var(--border); padding:36px;
+    background:var(--card-bg); position:relative; overflow:hidden;
+    transition:transform .3s var(--ease), border-color .3s;
+  }
+  .root-card::before {
+    content:''; position:absolute; inset:0; pointer-events:none; opacity:0;
+    background:linear-gradient(135deg,rgba(107,0,0,.15),transparent);
+    transition:opacity .3s;
+  }
+  .root-card:hover { transform:translateY(-4px); border-color:rgba(192,57,43,.4); }
+  .root-card:hover::before { opacity:1; }
+  .root-icon {
+    font-size:2.2rem; margin-bottom:18px; display:block;
+    line-height:1;
+  }
+  .root-era {
+    font-family:var(--font-caps); font-size:.58rem; letter-spacing:.3em;
+    text-transform:uppercase; color:var(--fire); margin-bottom:10px;
+  }
+  .root-name {
+    font-family:var(--font-display); font-size:1.3rem;
+    color:#fff; margin-bottom:14px;
+  }
+  .root-body { font-size:.93rem; color:var(--silver); line-height:1.75; }
+  .root-body em { color:var(--gold-pale); }
+
+  /* ══════════════════════════════════
+     SLIDE 3 — THE SIX MECHANISMS
+  ══════════════════════════════════ */
+  .mechanisms-section { background:var(--jet); }
+  .mechanisms-section::before {
+    content:''; position:absolute; inset:0; pointer-events:none;
+    background:radial-gradient(ellipse 80% 50% at 50% 100%,rgba(107,0,0,.08),transparent 70%);
+  }
+  .mechanism-list { counter-reset:mech; display:flex; flex-direction:column; gap:0; }
+  .mechanism-item {
+    counter-increment:mech;
+    display:grid; grid-template-columns:80px 1fr; gap:0;
+    border-bottom:1px solid var(--border);
+    transition:background .25s;
+  }
+  .mechanism-item:last-child { border-bottom:none; }
+  .mechanism-item:hover { background:rgba(184,148,31,.03); }
+  .mech-num {
+    padding:32px 0 32px 0; display:flex; align-items:flex-start; padding-top:34px;
+    font-family:var(--font-display); font-size:2.8rem;
+    color:rgba(107,0,0,.4); line-height:1; user-select:none;
+  }
+  .mech-body { padding:28px 0 28px 28px; border-left:1px solid var(--border); }
+  .mech-name {
+    font-family:var(--font-display); font-size:1.2rem;
+    color:var(--parchment); margin-bottom:10px;
+  }
+  .mech-name .red { color:var(--fire); }
+  .mech-desc { font-size:.93rem; color:var(--silver); line-height:1.75; }
+  .mech-desc em { color:var(--gold-pale); }
+  .mech-scripture {
+    margin-top:10px; font-family:var(--font-caps); font-size:.58rem;
+    letter-spacing:.25em; color:var(--ash);
+  }
+
+  /* ══════════════════════════════════
+     SLIDE 4 — MODERN MANIFESTATIONS
+  ══════════════════════════════════ */
+  .modern-section {}
+  .modern-intro-box {
+    border:1px solid rgba(192,57,43,.35); padding:36px 44px;
+    background:linear-gradient(135deg,rgba(107,0,0,.12),rgba(13,13,13,.8));
+    margin-bottom:52px; position:relative;
+  }
+  .modern-intro-box::before {
+    content:'WARNING'; position:absolute; top:-10px; left:32px;
+    font-family:var(--font-caps); font-size:.58rem; letter-spacing:.4em;
+    color:var(--fire); background:var(--void); padding:0 10px;
+  }
+  .modern-intro-box p {
+    font-size:1.05rem; color:var(--parchment); font-style:italic;
+    line-height:1.75;
+  }
+  .modern-grid {
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:24px;
+  }
+  .modern-card {
+    border:1px solid var(--border); padding:32px;
+    background:var(--card-bg); position:relative; overflow:hidden;
+    transition:border-color .3s, transform .3s;
+  }
+  .modern-card:hover { border-color:rgba(192,57,43,.45); transform:translateY(-3px); }
+  .modern-icon { font-size:1.8rem; margin-bottom:16px; }
+  .modern-era {
+    font-family:var(--font-caps); font-size:.58rem; letter-spacing:.3em;
+    text-transform:uppercase; color:var(--fire); margin-bottom:8px;
+  }
+  .modern-name {
+    font-family:var(--font-display); font-size:1.1rem;
+    color:#fff; margin-bottom:12px;
+  }
+  .modern-body { font-size:.9rem; color:var(--silver); line-height:1.75; }
+  .modern-body em { color:var(--gold-pale); }
+  .modern-body strong { color:var(--parchment); }
+
+  /* ══════════════════════════════════
+     SLIDE 5 — POPULATION STATISTICS
+  ══════════════════════════════════ */
+  .stats-section { background:var(--jet); }
+  .stats-section::before {
+    content:''; position:absolute; inset:0; pointer-events:none;
+    background:radial-gradient(ellipse 60% 60% at 20% 50%,rgba(107,0,0,.1),transparent 70%);
+  }
+  .stats-headline {
+    font-family:var(--font-display); font-size:clamp(1.4rem,3vw,2rem);
+    color:var(--parchment); text-align:center; font-style:italic;
+    max-width:780px; margin:0 auto 56px; line-height:1.5;
+  }
+  .stats-headline strong { color:var(--fire); font-style:normal; }
+  .stats-grid {
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:24px; margin-bottom:52px;
+  }
+  .stat-card {
+    border:1px solid var(--border); padding:36px 28px; text-align:center;
+    background:var(--card-bg);
+    transition:border-color .3s, transform .3s;
+  }
+  .stat-card:hover { border-color:rgba(192,57,43,.4); transform:translateY(-4px); }
+  .stat-big {
+    font-family:var(--font-display); font-size:clamp(2.5rem,6vw,4rem);
+    color:var(--fire); line-height:1; margin-bottom:8px;
+    font-weight:900;
+  }
+  .stat-label {
+    font-family:var(--font-caps); font-size:.62rem; letter-spacing:.28em;
+    text-transform:uppercase; color:var(--ash); margin-bottom:10px;
+  }
+  .stat-note { font-size:.85rem; color:var(--silver); line-height:1.6; }
+  .stat-note em { color:var(--gold-pale); }
+  .stats-source {
+    text-align:center; font-family:var(--font-caps); font-size:.58rem;
+    letter-spacing:.25em; color:var(--ash); margin-top:24px;
+  }
+
+  /* ══════════════════════════════════
+     SLIDE 6 — THE COUNTERMEASURE
+  ══════════════════════════════════ */
+  .counter-section {}
+  .counter-grid {
+    display:grid; grid-template-columns:1fr 1fr; gap:52px; align-items:start;
+  }
+  @media(max-width:768px) { .counter-grid { grid-template-columns:1fr; gap:40px; } }
+  .counter-verses { display:flex; flex-direction:column; gap:20px; }
+  .c-verse-card {
+    border:1px solid rgba(184,148,31,.2); padding:28px;
+    background:linear-gradient(135deg,rgba(19,19,19,.9),rgba(13,13,13,.8));
+    position:relative;
+  }
+  .c-verse-card::before {
+    content:''; position:absolute; left:0; top:0; bottom:0;
+    width:3px;
+    background:linear-gradient(var(--gold),var(--fire));
+  }
+  .c-ref {
+    font-family:var(--font-caps); font-size:.6rem; letter-spacing:.3em;
+    color:var(--gold-pale); margin-bottom:12px;
+  }
+  .c-text {
+    font-size:1rem; color:var(--parchment); font-style:italic;
+    line-height:1.7; margin-bottom:10px;
+  }
+  .c-note { font-size:.85rem; color:var(--ash); }
+  .counter-steps { }
+  .steps-label {
+    font-family:var(--font-caps); font-size:.6rem; letter-spacing:.3em;
+    text-transform:uppercase; color:var(--fire); margin-bottom:28px;
+  }
+  .step-list { display:flex; flex-direction:column; gap:0; }
+  .step-item {
+    display:grid; grid-template-columns:48px 1fr; gap:0;
+    border-bottom:1px solid rgba(184,148,31,.1);
+    padding:22px 0;
+  }
+  .step-item:last-child { border-bottom:none; }
+  .step-n {
+    font-family:var(--font-display); font-size:1.6rem;
+    color:rgba(184,148,31,.35); line-height:1.2;
+  }
+  .step-body { padding-left:16px; }
+  .step-name {
+    font-family:var(--font-display); font-size:1rem;
+    color:var(--parchment); margin-bottom:6px;
+  }
+  .step-desc { font-size:.88rem; color:var(--silver); line-height:1.7; }
+  .step-desc em { color:var(--gold-pale); }
+
+  /* ══════════════════════════════════
+     SLIDE 7 — BOOKS CTA
+  ══════════════════════════════════ */
+  .cta-section { background:var(--jet); text-align:center; }
+  .cta-section::before {
+    content:''; position:absolute; inset:0; pointer-events:none;
+    background:radial-gradient(ellipse 60% 40% at 50% 50%,rgba(107,0,0,.12),transparent 70%);
+  }
+  .cta-books-grid {
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:24px; margin:52px 0; text-align:left;
+  }
+  .cta-book-card {
+    border:1px solid var(--border); padding:32px;
+    background:var(--card-bg); position:relative; overflow:hidden;
+    transition:border-color .3s, transform .3s;
+  }
+  .cta-book-card:hover { border-color:rgba(192,57,43,.45); transform:translateY(-4px); }
+  .book-num-label {
+    font-family:var(--font-caps); font-size:.58rem; letter-spacing:.3em;
+    text-transform:uppercase; color:var(--fire); margin-bottom:10px;
+  }
+  .book-card-title {
+    font-family:var(--font-display); font-size:1.15rem;
+    color:#fff; margin-bottom:14px; line-height:1.3;
+  }
+  .book-card-desc { font-size:.9rem; color:var(--silver); line-height:1.7; margin-bottom:20px; }
+  .book-card-desc em { color:var(--gold-pale); }
+  .btn-book {
+    display:inline-block; padding:11px 26px;
+    background:linear-gradient(135deg,var(--blood),var(--crimson));
+    color:#fff; font-family:var(--font-caps); font-size:.6rem;
+    letter-spacing:.18em; text-transform:uppercase; border-radius:1px;
+    border:1px solid rgba(192,57,43,.4); transition:all .25s;
+  }
+  .btn-book:hover { transform:translateY(-2px); box-shadow:0 0 28px rgba(107,0,0,.6); }
+  .cta-actions { display:flex; gap:20px; justify-content:center; flex-wrap:wrap; margin-top:12px; }
+
+  /* ══════════════════════════════════
+     FOOTER
+  ══════════════════════════════════ */
+  .site-footer {
+    background:var(--gloss);
+    border-top:1px solid var(--border);
+    padding:40px 32px;
+  }
+  .footer-inner {
+    max-width:1180px; margin:0 auto;
+    display:flex; flex-direction:column; align-items:center; gap:20px;
+    text-align:center;
+  }
+  .footer-logo { font-family:var(--font-caps); font-size:.8rem; letter-spacing:.25em; color:var(--gold); }
+  .footer-tagline { font-style:italic; color:var(--ash); font-size:.9rem; }
+  .footer-nav { display:flex; gap:24px; flex-wrap:wrap; justify-content:center; }
+  .footer-nav a {
+    font-family:var(--font-caps); font-size:.6rem; letter-spacing:.2em;
+    text-transform:uppercase; color:var(--ash); transition:color .2s;
+  }
+  .footer-nav a:hover { color:var(--parchment); }
+  .footer-copy { font-size:.78rem; color:rgba(110,110,110,.6); }
+
+  /* ══════════════════════════════════
+     BACK TO TOP
+  ══════════════════════════════════ */
+  .back-top {
+    position:fixed; bottom:32px; right:32px; z-index:900;
+    width:44px; height:44px;
+    background:rgba(107,0,0,.7); border:1px solid rgba(192,57,43,.4);
+    color:var(--parchment); font-size:1.1rem;
+    display:flex; align-items:center; justify-content:center;
+    opacity:0; transform:translateY(20px);
+    transition:opacity .3s, transform .3s;
+    border-radius:1px;
+  }
+  .back-top.visible { opacity:1; transform:translateY(0); }
+
+  /* ══════════════════════════════════
+     REVEAL ANIMATION
+  ══════════════════════════════════ */
+  [data-aos] {
+    opacity:0; transform:translateY(28px);
+    transition:opacity .7s var(--ease), transform .7s var(--ease);
+  }
+  [data-aos].aos-in { opacity:1; transform:translateY(0); }
+
+  /* ══════════════════════════════════
+     RESPONSIVE
+  ══════════════════════════════════ */
+  @media(max-width:900px) {
+    .mechanism-item { grid-template-columns:56px 1fr; }
+    .mech-num { font-size:2rem; }
+  }
+  @media(max-width:768px) {
+    .nav-links { display:none; }
+    .container { padding:0 20px; }
+    .section { padding:72px 0; }
+    .pres-meta { gap:24px; }
+    .counter-grid { grid-template-columns:1fr; }
+  }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════ CUSTOM CURSOR ═══════════ -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- ═══════════ NAV ═══════════ -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-mark">✦</span>
+        <span>FaithfulBooks</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#books">Books</a></li>
+        <li><a href="index.html#series">Series</a></li>
+        <li><a href="pharmekia.html" class="active">Pharmekia</a></li>
+        <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SLIDE 0 — HERO / TITLE CARD
+  ═══════════════════════════════════════════════════════ -->
+  <section class="pres-hero section" id="hero">
+    <div class="container">
+      <p class="hero-eyebrow">FaithfulBooks Publishing · Spiritual Warfare Research</p>
+      <p class="pres-greek">φαρμακεία</p>
+      <h1 class="pres-title">
+        <span class="red">Pharmekia</span><br/>
+        The Ancient Art of<br/>Chemical Sorcery
+      </h1>
+      <p class="pres-subtitle">
+        From Babylon's temple pharmacopoeia to the modern pharmaceutical empire —
+        the 3,000-year unbroken chain that the book of Revelation warned you about.
+      </p>
+      <div class="pres-meta">
+        <div>Presenter · <span>Adam Joseph Hanrahan</span></div>
+        <div>Publisher · <span>FaithfulBooks Publishing</span></div>
+        <div>Sections · <span>7</span></div>
+      </div>
+      <div class="hero-rule">
+        <span></span><span class="rule-sym">⚔</span><span></span>
+      </div>
+      <div style="display:flex;gap:20px;justify-content:center;flex-wrap:wrap;">
+        <a href="#definition" class="btn-primary">Begin Presentation ↓</a>
+        <a href="index.html#books" class="btn-ghost">Explore the Books</a>
+      </div>
+    </div>
+    <a href="#definition" class="scroll-cue" aria-label="Scroll to begin">
+      <span class="scroll-line"></span>
+      <span style="font-family:var(--font-caps);font-size:.55rem;letter-spacing:.3em;text-transform:uppercase;">Scroll</span>
+    </a>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SLIDE 1 — DEFINITION & ETYMOLOGY
+  ═══════════════════════════════════════════════════════ -->
+  <section class="section definition-section" id="definition">
+    <div class="container">
+      <div class="slide-divider">
+        <span class="slide-num">SLIDE I · DEFINITION &amp; ETYMOLOGY</span>
+      </div>
+      <span class="section-label centered">The Word Itself</span>
+      <h2 class="section-title centered">What Does <span>Pharmekia</span> Mean?</h2>
+      <p class="section-intro">The answer is encoded in a single Greek word that appears three times in the New Testament — and its root sits at the foundation of a modern trillion-dollar industry.</p>
+
+      <div class="def-grid">
+
+        <div data-aos>
+          <div class="def-etymology">
+            <div class="greek-word">φαρμακεία</div>
+            <div class="greek-transliteration">pharmakeia · /far-mak-EYE-ah/</div>
+            <p class="greek-def">"The use of drugs, potions, or spells; sorcery; witchcraft; the administering of poisons."</p>
+            <ul class="greek-root-list">
+              <li>
+                <span class="root-word">pharmakon (φάρμακον)</span>
+                <span>Drug, medicine, poison, charm — the base root. Used by Hippocrates for both healing remedies and lethal doses.</span>
+              </li>
+              <li>
+                <span class="root-word">pharmakeus (φαρμακεύς)</span>
+                <span>Sorcerer, poisoner, drug-maker — the practitioner of the art.</span>
+              </li>
+              <li>
+                <span class="root-word">pharmakos (φαρμακός)</span>
+                <span>Scapegoat, sacrificial victim — the ritual object of the practice.</span>
+              </li>
+              <li>
+                <span class="root-word">pharmakeia → pharmacy</span>
+                <span>The modern English word "pharmacy" derives directly and unambiguously from this root.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="verse-stack" data-aos>
+          <div class="verse-card">
+            <div class="verse-ref">Galatians 5:19–21 (KJV)</div>
+            <p class="verse-text">"Now the works of the flesh are manifest, which are these… idolatry, <strong>witchcraft</strong> [pharmakeia]… they which do such things shall not inherit the kingdom of God."</p>
+            <p class="verse-note">Paul classifies pharmekia alongside murder and sexual immorality as a work of the flesh. <strong>This is not metaphor.</strong></p>
+          </div>
+          <div class="verse-card">
+            <div class="verse-ref">Revelation 18:23 (KJV)</div>
+            <p class="verse-text">"…for by thy <strong>sorceries</strong> [pharmakeia] were all nations deceived."</p>
+            <p class="verse-note">The final Babylon — described as a global economic and spiritual empire — <strong>deceives all nations through pharmekia</strong>. Not a local event. A planetary one.</p>
+          </div>
+          <div class="verse-card">
+            <div class="verse-ref">Revelation 9:21 (KJV)</div>
+            <p class="verse-text">"Neither repented they of their murders, nor of their <strong>sorceries</strong> [pharmakeia], nor of their fornication, nor of their thefts."</p>
+            <p class="verse-note">Listed directly alongside murder. In the end-times judgment sequence, <strong>pharmekia is a capital spiritual offense</strong>.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SLIDE 2 — ANCIENT ROOTS
+  ═══════════════════════════════════════════════════════ -->
+  <section class="section roots-section" id="ancient-roots">
+    <div class="container">
+      <div class="slide-divider">
+        <span class="slide-num">SLIDE II · ANCIENT ROOTS</span>
+      </div>
+      <span class="section-label centered">Historical Record</span>
+      <h2 class="section-title centered">3,000 Years of<br/><span>Unbroken Practice</span></h2>
+      <p class="section-intro">Every major ancient civilization maintained a class of practitioners whose primary tool was the deliberate chemical alteration of human consciousness — documented, systematic, and connected to spiritual entities.</p>
+
+      <div class="roots-grid">
+
+        <div class="root-card" data-aos>
+          <span class="root-icon">𒀭</span>
+          <div class="root-era">2400–600 BCE</div>
+          <h3 class="root-name">Babylon & Mesopotamia</h3>
+          <p class="root-body">The <em>āšipu</em> (exorcist-priests) and <em>asû</em> (physician-sorcerers) of Babylon maintained the world's earliest pharmacopoeia of ritual substances. Tablets from Nineveh describe drug-assisted rituals to invoke the <em>gallu</em> — demonic entities assigned to drag souls to the underworld. Babylon is the city Revelation 18 names when it speaks of pharmekia deceiving all nations.</p>
+        </div>
+
+        <div class="root-card" data-aos>
+          <span class="root-icon">𓂀</span>
+          <div class="root-era">3100–30 BCE</div>
+          <h3 class="root-name">Ancient Egypt</h3>
+          <p class="root-body">Egyptian temple priests administered <em>kyphi</em> (a blend of 16 substances including frankincense, myrrh, and psychoactive resins) during the night-battle ritual against Apep. The Edwin Smith Papyrus and Ebers Papyrus document over 700 ritual-pharmaceutical preparations. The goal was explicitly spiritual: to alter consciousness for contact with the <em>netjeru</em> — the divine and adversarial forces of the unseen realm.</p>
+        </div>
+
+        <div class="root-card" data-aos>
+          <span class="root-icon">🏛</span>
+          <div class="root-era">600–400 BCE</div>
+          <h3 class="root-name">Greek Mystery Schools</h3>
+          <p class="root-body">The Eleusinian Mysteries — the most sacred ritual in the Greek world, attended by Plato, Cicero, Marcus Aurelius, and Aristotle — centered on the <em>kykeon</em>: a grain-based drink containing what scholars now identify as <em>ergot</em> (the natural precursor to LSD). Initiates reported visions, encounters with divine beings, and ego dissolution. The mysteries were explicitly pharmakeia — chemically induced contact with what they called <em>the gods</em>.</p>
+        </div>
+
+        <div class="root-card" data-aos>
+          <span class="root-icon">ᚠ</span>
+          <div class="root-era">200 BCE – 1100 CE</div>
+          <h3 class="root-name">Norse Seiðr Tradition</h3>
+          <p class="root-body">The Norse <em>völva</em> (seeress-shamans) practiced <em>seiðr</em> using herbal preparations of henbane, fly agaric (<em>Amanita muscaria</em>), and other entheogens to enter trance states for prophecy and spiritual warfare. The Eddas describe Odin himself using seiðr — considered the most transgressive and powerful form of magic precisely because it opened the practitioner to direct possession by external entities.</p>
+        </div>
+
+        <div class="root-card" data-aos>
+          <span class="root-icon">☽</span>
+          <div class="root-era">600 BCE – Present</div>
+          <h3 class="root-name">Zoroastrian Haoma</h3>
+          <p class="root-body">The sacred drink <em>haoma</em> (Sanskrit: <em>soma</em>) was the central sacrament of Zoroastrian and Vedic ritual. Scholars identify it as Ephedra, fly agaric, or Syrian rue — all psychoactive. The Avesta describes haoma as a bridge between the material and the spiritual realms. The parallel to pharmekia is explicit: a chemical substance administered as a spiritual gateway, presided over by a priestly class.</p>
+        </div>
+
+        <div class="root-card" data-aos>
+          <span class="root-icon">✝</span>
+          <div class="root-era">100 – 400 CE</div>
+          <h3 class="root-name">Gnostic Pharmakeia</h3>
+          <p class="root-body">The Nag Hammadi texts and the Church Fathers (especially Irenaeus and Hippolytus) document Gnostic sects — the Sethians, Valentinians, Ophites, and Simonians — who administered ritual substances as part of initiation into <em>gnosis</em>. Simon Magus (Acts 8) is described as a pharmakos. The Archons — the hostile cosmic administrators of Gnostic cosmology — were accessed through pharmekia, not bypassed by it.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SLIDE 3 — THE SIX MECHANISMS
+  ═══════════════════════════════════════════════════════ -->
+  <section class="section mechanisms-section" id="mechanisms">
+    <div class="container">
+      <div class="slide-divider">
+        <span class="slide-num">SLIDE III · HOW IT WORKS</span>
+      </div>
+      <span class="section-label centered">The Mechanism</span>
+      <h2 class="section-title centered">Six Ways <span>Pharmekia</span><br/>Opens the Gate</h2>
+      <p class="section-intro">The gate is opened from both sides. Chemical alteration of consciousness is not a metaphor — it is a documented mechanism by which spiritual boundary conditions are disrupted.</p>
+
+      <div class="mechanism-list">
+        <div class="mechanism-item" data-aos>
+          <div class="mech-num">I</div>
+          <div class="mech-body">
+            <div class="mech-name"><span class="red">Consciousness Fragmentation</span> — The Primary Gateway</div>
+            <p class="mech-desc">Psychoactive substances disrupt the integrated state of human consciousness — the <em>nous</em> in biblical/Platonic terms. A fragmented consciousness loses its God-given capacity for discernment and becomes permeable to external influence. This is not psychological metaphor; the ancient world understood it as a literal structural breach.</p>
+            <div class="mech-scripture">Scripture context: 1 Peter 5:8 — "Be sober, be vigilant; because your adversary the devil, as a roaring lion, walketh about, seeking whom he may devour."</div>
+          </div>
+        </div>
+        <div class="mechanism-item" data-aos>
+          <div class="mech-num">II</div>
+          <div class="mech-body">
+            <div class="mech-name"><span class="red">Ritual Binding</span> — The Covenant Structure</div>
+            <p class="mech-desc">In every ancient tradition, pharmekia was never just a drug — it was a sacrament within a covenant structure. The substance was the seal of an agreement. The person ingesting it entered a binding spiritual contract with whatever entity presided over that ritual space. <em>The transaction was real. The counterparty was not imaginary.</em></p>
+            <div class="mech-scripture">Scripture context: 1 Corinthians 10:20 — "…the things which the Gentiles sacrifice, they sacrifice to devils, and not to God."</div>
+          </div>
+        </div>
+        <div class="mechanism-item" data-aos>
+          <div class="mech-num">III</div>
+          <div class="mech-body">
+            <div class="mech-name"><span class="red">Identity Dissolution</span> — Erasure of the Imago Dei</div>
+            <p class="mech-desc">Every entheogenic experience across all traditions involves the dissolution of self-boundaries — experienced as "ego death." From a biblical framework, the <em>imago Dei</em> (image of God) in man is carried in individual personhood. Systematic destruction of individual identity through chemical means is not liberation — it is the erasure of the spiritual signature that makes a person human.</p>
+            <div class="mech-scripture">Scripture context: Genesis 1:27 — "So God created man in his own image, in the image of God created he him."</div>
+          </div>
+        </div>
+        <div class="mechanism-item" data-aos>
+          <div class="mech-num">IV</div>
+          <div class="mech-body">
+            <div class="mech-name"><span class="red">Mass Deception Infrastructure</span> — The Babylon Model</div>
+            <p class="mech-desc">Revelation 18:23 is not describing a local cult — it describes a <em>planetary pharmekia infrastructure</em> by which "all nations were deceived." Babylon in Revelation is not just ancient Iraq; it is the archetype of the global system that operates through pharmekia as its primary tool of population control. A deceived population cannot resist. That is the strategic purpose.</p>
+            <div class="mech-scripture">Scripture context: Revelation 18:23 — "…for by thy sorceries were all nations deceived."</div>
+          </div>
+        </div>
+        <div class="mechanism-item" data-aos>
+          <div class="mech-num">V</div>
+          <div class="mech-body">
+            <div class="mech-name"><span class="red">Generational Transmission</span> — Inherited Bondage</div>
+            <p class="mech-desc">Pharmekia creates what Scripture calls <em>iniquity</em> — spiritual debt that propagates through bloodlines. The ancient world understood this without clinical language: a family that offered their children to Molech, or that participated in temple pharmekia rites, created spiritual conditions that affected subsequent generations. This is documented in the genealogical records of Exodus 20:5.</p>
+            <div class="mech-scripture">Scripture context: Exodus 20:5 — "…visiting the iniquity of the fathers upon the children unto the third and fourth generation."</div>
+          </div>
+        </div>
+        <div class="mechanism-item" data-aos>
+          <div class="mech-num">VI</div>
+          <div class="mech-body">
+            <div class="mech-name"><span class="red">The Counterfeit Spiritual Experience</span> — The False Epiphany</div>
+            <p class="mech-desc">The most dangerous mechanism. Pharmekia produces genuine spiritual experiences — real encounters with non-human entities, real feelings of transcendence, real perceptions of hidden truth. These experiences are not fabricated by the brain. They are counterfeit: <em>real contact, wrong source</em>. The person believes they have encountered God when they have encountered the adversary presenting himself as an angel of light (2 Corinthians 11:14).</p>
+            <div class="mech-scripture">Scripture context: 2 Corinthians 11:14 — "…for Satan himself is transformed into an angel of light."</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SLIDE 4 — MODERN MANIFESTATIONS
+  ═══════════════════════════════════════════════════════ -->
+  <section class="section modern-section" id="modern">
+    <div class="container">
+      <div class="slide-divider">
+        <span class="slide-num">SLIDE IV · MODERN MANIFESTATIONS</span>
+      </div>
+      <span class="section-label centered">The Present Battlefield</span>
+      <h2 class="section-title centered">Pharmekia in the<br/><span>21st Century</span></h2>
+
+      <div class="modern-intro-box" data-aos>
+        <p>"The name changed. The mechanism did not. Babylon's pharmacists now wear white coats and carry FDA credentials — but the spiritual architecture is identical to the temple priests of Marduk. <strong>The gate opens the same way it always has.</strong>"</p>
+      </div>
+
+      <div class="modern-grid">
+        <div class="modern-card" data-aos>
+          <div class="modern-icon">💊</div>
+          <div class="modern-era">1950s – Present</div>
+          <h3 class="modern-name">The Pharmaceutical Industry</h3>
+          <p class="modern-body">The word <em>pharmaceutical</em> derives directly from <em>pharmakeia</em>. The United States — the nation most directly corresponding to Revelation's Babylon in global influence — spends <strong>$600 billion+</strong> annually on pharmaceuticals. 1-in-6 Americans is on a psychiatric drug. The mass alteration of human consciousness through chemical means is not a fringe phenomenon. It is the dominant industry of the Western world.</p>
+        </div>
+        <div class="modern-card" data-aos>
+          <div class="modern-icon">🍄</div>
+          <div class="modern-era">2010s – Present</div>
+          <h3 class="modern-name">The Psychedelic Renaissance</h3>
+          <p class="modern-body">Since 2012, Johns Hopkins, NYU, MAPS, and DARPA have poured hundreds of millions into "therapeutic" psychedelic research — psilocybin, DMT (dimethyltryptamine), MDMA, ketamine, LSD. The stated goal is mental health treatment. The documented experience of subjects includes encounters with <em>"entities,"</em> <em>"machine elves,"</em> and beings who communicate and make agreements. The ancient world called this pharmekia. The modern world calls it medicine. The entity on the other end of the gateway does not care what you call it.</p>
+        </div>
+        <div class="modern-card" data-aos>
+          <div class="modern-icon">📺</div>
+          <div class="modern-era">1945 – Present</div>
+          <h3 class="modern-name">Media as Pharmakos</h3>
+          <p class="modern-body">McLuhan's insight that "the medium is the message" points to something deeper: electronic media produces measurable neurological and psychological changes indistinguishable in mechanism from chemical pharmacology. The average American consumes <strong>11+ hours of screen time per day</strong> — a dosing schedule that would alarm any physician if applied to any other substance. The consciousness fragmentation this produces creates the same permeability to spiritual influence as classical pharmekia.</p>
+        </div>
+        <div class="modern-card" data-aos>
+          <div class="modern-icon">🧬</div>
+          <div class="modern-era">1970s – Present</div>
+          <h3 class="modern-name">MKULTRA & Chemical Warfare</h3>
+          <p class="modern-body">The CIA's MKULTRA program (1953–1973, officially) used LSD, mescaline, scopolamine, and other drugs on unwitting subjects to test mind control, identity dissolution, and behavior modification. <strong>Over 80 institutions participated.</strong> The program's goals — breaking the integrated self, installing alternative behavioral programs — are identical to the goals of ancient pharmekia rites. The government inherited Babylon's toolkit. (See: <em>PSYOPS</em> by Adam Hanrahan.)</p>
+        </div>
+        <div class="modern-card" data-aos>
+          <div class="modern-icon">🏭</div>
+          <div class="modern-era">1900s – Present</div>
+          <h3 class="modern-name">Industrial Food & Water</h3>
+          <p class="modern-body">Fluoride in municipal water supplies (neurotoxic at elevated doses per the NIH's 2020 study), endocrine-disrupting chemicals in plastics and processed food, glyphosate in the food supply — the systematic chemical modification of the human population is not a conspiracy theory. It is documented in peer-reviewed literature. The distinction from classical pharmekia is intent, not mechanism. The effect on consciousness is the same: <em>the population is chemically managed.</em></p>
+        </div>
+        <div class="modern-card" data-aos>
+          <div class="modern-icon">⛪</div>
+          <div class="modern-era">1960s – Present</div>
+          <h3 class="modern-name">The Church's Silence</h3>
+          <p class="modern-body">Perhaps the most devastating manifestation: the mainstream Western church has been almost entirely silent on pharmekia for 60 years — the precise period during which it scaled to planetary dominance. While Revelation explicitly names it as the mechanism by which <em>all nations are deceived</em>, the average American Christian encounters the word "pharmekia" zero times in a lifetime of Sunday services. The watchmen are asleep. The gate is open.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SLIDE 5 — POPULATION STATISTICS
+  ═══════════════════════════════════════════════════════ -->
+  <section class="section stats-section" id="statistics">
+    <div class="container">
+      <div class="slide-divider">
+        <span class="slide-num">SLIDE V · THE SCALE</span>
+      </div>
+      <span class="section-label centered">Population Data</span>
+      <h2 class="section-title centered">The Numbers That<br/><span>Revelation Warned About</span></h2>
+
+      <p class="stats-headline" data-aos>
+        "All nations" — <strong>πάντα τὰ ἔθνη</strong> — is not rhetorical hyperbole.
+        It is a statistical claim. The data suggests Revelation 18:23 was describing something
+        that would one day be <strong>measurable in a spreadsheet</strong>.
+      </p>
+
+      <div class="stats-grid">
+        <div class="stat-card" data-aos>
+          <div class="stat-big">$1.5T</div>
+          <div class="stat-label">Global Pharma Revenue</div>
+          <p class="stat-note">Annual global pharmaceutical industry revenue. <em>The largest industry in human history.</em></p>
+        </div>
+        <div class="stat-card" data-aos>
+          <div class="stat-big">66%</div>
+          <div class="stat-label">Americans on Prescription Drugs</div>
+          <p class="stat-note">Two-thirds of the U.S. adult population is on at least one prescription pharmaceutical. <em>The majority is chemically managed.</em></p>
+        </div>
+        <div class="stat-card" data-aos>
+          <div class="stat-big">280M</div>
+          <div class="stat-label">Illicit Drug Users Globally</div>
+          <p class="stat-note">UNODC 2023 estimate of global illicit drug users. <em>This excludes all legal pharmaceuticals and alcohol.</em></p>
+        </div>
+        <div class="stat-card" data-aos>
+          <div class="stat-big">1-in-6</div>
+          <div class="stat-label">Americans on Psychiatric Drugs</div>
+          <p class="stat-note">Antidepressants, antipsychotics, stimulants — consciousness-altering drugs prescribed as routine medical care. <em>46 million Americans.</em></p>
+        </div>
+        <div class="stat-card" data-aos>
+          <div class="stat-big">$10B</div>
+          <div class="stat-label">Psychedelic Medicine Market (2030)</div>
+          <p class="stat-note">Projected market size for therapeutic psychedelics by 2030. <em>The ancient pharmekia rites are now FDA pipeline candidates.</em></p>
+        </div>
+        <div class="stat-card" data-aos>
+          <div class="stat-big">80K+</div>
+          <div class="stat-label">Synthetic Chemicals in Commerce</div>
+          <p class="stat-note">Synthetic chemicals in regular commercial use in the U.S., fewer than 1% of which have been tested for neurological or endocrine effects. <em>The experiment is on the population.</em></p>
+        </div>
+      </div>
+      <p class="stats-source">Sources: IQVIA 2023 · CDC NCHS · UNODC World Drug Report 2023 · Grand View Research · EPA TSCA Registry</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SLIDE 6 — THE COUNTERMEASURE
+  ═══════════════════════════════════════════════════════ -->
+  <section class="section counter-section" id="countermeasure">
+    <div class="container">
+      <div class="slide-divider">
+        <span class="slide-num">SLIDE VI · THE COUNTERMEASURE</span>
+      </div>
+      <span class="section-label centered">The Resistance Protocol</span>
+      <h2 class="section-title centered">Breaking<br/><span>Pharmekia's Hold</span></h2>
+      <p class="section-intro">The biblical countermeasure to pharmekia is not passive abstinence — it is an active, disciplined maintenance of the sober mind as a defended spiritual territory.</p>
+
+      <div class="counter-grid">
+
+        <div class="counter-verses" data-aos>
+          <div class="c-verse-card">
+            <div class="c-ref">1 Peter 5:8 (KJV)</div>
+            <p class="c-text">"Be sober, be vigilant; because your adversary the devil, as a roaring lion, walketh about, seeking whom he may devour."</p>
+            <p class="c-note">Sobriety (νήφω — nēphō) is not a lifestyle preference. It is the primary defensive posture Scripture prescribes against the adversary. The lion can only devour the impaired.</p>
+          </div>
+          <div class="c-verse-card">
+            <div class="c-ref">Romans 12:2 (KJV)</div>
+            <p class="c-text">"And be not conformed to this world: but be ye transformed by the renewing of your mind, that ye may prove what is that good, and acceptable, and perfect, will of God."</p>
+            <p class="c-note">The renewed mind is the opposite of the pharmekia-fragmented mind. Transformation begins with cognitive integrity — a mind operating at full capacity under the direction of the Spirit.</p>
+          </div>
+          <div class="c-verse-card">
+            <div class="c-ref">2 Timothy 1:7 (KJV)</div>
+            <p class="c-text">"For God hath not given us the spirit of fear; but of power, and of love, and of a sound mind."</p>
+            <p class="c-note">The "sound mind" (σωφρονισμός — sōphronismos) — self-controlled, disciplined, unimpaired — is described as a divine gift. Pharmekia is its direct counterattack.</p>
+          </div>
+          <div class="c-verse-card">
+            <div class="c-ref">Ephesians 5:18 (KJV)</div>
+            <p class="c-text">"And be not drunk with wine, wherein is excess; but be filled with the Spirit."</p>
+            <p class="c-note">Paul presents the contrast explicitly: chemical alteration of consciousness vs. Spirit-filled consciousness. These are <em>mutually exclusive</em> — you cannot hold both at once.</p>
+          </div>
+        </div>
+
+        <div class="counter-steps" data-aos>
+          <div class="steps-label">The Resistance Protocol — Seven Steps</div>
+          <div class="step-list">
+            <div class="step-item">
+              <div class="step-n">1</div>
+              <div class="step-body">
+                <div class="step-name">Acknowledge the Territory</div>
+                <p class="step-desc">You cannot defend ground you do not know you own. The mind is not neutral space — it is the primary battlefield. <em>Name it. Claim it. Defend it.</em></p>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-n">2</div>
+              <div class="step-body">
+                <div class="step-name">Inventory Every Open Gate</div>
+                <p class="step-desc">Identify every substance — prescription, recreational, habitual — that chemically alters your consciousness. This is not about condemnation. It is strategic intelligence. <em>Know what is open.</em></p>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-n">3</div>
+              <div class="step-body">
+                <div class="step-name">Break Ancestral Pharmekia Covenants</div>
+                <p class="step-desc">Renounce, in prayer, any pharmekia involvement in your bloodline — occult, masonic, ritual, or habitual. <em>The iniquity of the fathers is a legal claim. Revoke it.</em></p>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-n">4</div>
+              <div class="step-body">
+                <div class="step-name">Rebuild the Sober Mind</div>
+                <p class="step-desc">Sobriety is not merely the absence of substances — it is the active cultivation of a clear, disciplined, attentive mind through Scripture, prayer, and physical discipline. <em>Build the fortress, not just the wall.</em></p>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-n">5</div>
+              <div class="step-body">
+                <div class="step-name">Monitor the Media Dose</div>
+                <p class="step-desc">Apply the same pharmekia framework to media consumption. Calculate your daily dose. Ask: <em>what is this opening in me? What is it installing?</em> The mechanism is the same as chemical pharmekia.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-n">6</div>
+              <div class="step-body">
+                <div class="step-name">Armor Up — Ephesians 6</div>
+                <p class="step-desc">The armor of God (Ephesians 6:10–18) is not inspirational poetry. It is a specific, active defensive protocol for the spiritual warrior operating in enemy-occupied territory. <em>Wear it daily. Especially the helmet — the defense of the mind.</em></p>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-n">7</div>
+              <div class="step-body">
+                <div class="step-name">Teach Others</div>
+                <p class="step-desc">Revelation 18's pharmekia is planetary because it operates in silence and ignorance. The countermeasure is equally planetary: <em>every warrior who understands the mechanism is obligated to expose it.</em> This presentation is that obligation in action.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SLIDE 7 — BOOKS CTA
+  ═══════════════════════════════════════════════════════ -->
+  <section class="section cta-section" id="books">
+    <div class="container">
+      <div class="slide-divider">
+        <span class="slide-num">SLIDE VII · THE LIBRARY</span>
+      </div>
+      <span class="section-label centered">Go Deeper</span>
+      <h2 class="section-title centered">The Books That<br/><span>Built This Presentation</span></h2>
+      <p class="section-intro">Every claim in this presentation is sourced, documented, and expanded in Adam Hanrahan's Spiritual Warrior series. These are not opinion pieces — they are researched, referenced intelligence briefs for the spiritual battlefield.</p>
+
+      <div class="cta-books-grid">
+        <div class="cta-book-card" data-aos>
+          <div class="book-num-label">Soul Cage Series · Book 1</div>
+          <h3 class="book-card-title">Shattering the Veil: The Reality of Spiritual Warfare</h3>
+          <p class="book-card-desc">The foundational playbook. Maps three battlegrounds — cosmic, cultural, personal — and documents the 6-stage demonic attack sequence from Invitation to Death. <em>Where this presentation shows you the enemy's tool, Shattering the Veil puts the weapons in your hands.</em></p>
+          <a href="https://adamhanrahan.gumroad.com" class="btn-book" target="_blank" rel="noopener">Get on Gumroad ↗</a>
+        </div>
+        <div class="cta-book-card" data-aos>
+          <div class="book-num-label">Soul Cage Series · Book 2 — Only $0.99</div>
+          <h3 class="book-card-title">Demonic Origins: Ancient Roots of Mankind's Spiritual War</h3>
+          <p class="book-card-desc">Drawing from the Books of Enoch, Jubilees, Solomon, Genesis, and Revelation — the definitive genealogy of mankind's natural enemy. Their motives, strengths, weaknesses, and the mechanics of the coming beast system. <em>The intelligence brief every spiritual warrior needs.</em></p>
+          <a href="https://play.google.com/store/books/details?id=7SybEQAAQBAJ" class="btn-book" target="_blank" rel="noopener">Google Play — $0.99 ↗</a>
+        </div>
+        <div class="cta-book-card" data-aos>
+          <div class="book-num-label">Soul Cage Series · Book 3</div>
+          <h3 class="book-card-title">Soul Cage: The Return of the Ancient Demonic</h3>
+          <p class="book-card-desc">A live war report. From Carthaginian Tophets to CERN's Shiva statue, Bohemian Grove, and the post-1940s resurgence of <em>pharmekia and forbidden knowledge</em> — Hanrahan lays out how the fallen are moving into position right now. The most urgent book in the series.</p>
+          <a href="https://adamhanrahan.gumroad.com" class="btn-book" target="_blank" rel="noopener">Get on Gumroad ↗</a>
+        </div>
+        <div class="cta-book-card" data-aos>
+          <div class="book-num-label">Non-Fiction Exposé · 450 pp</div>
+          <h3 class="book-card-title">PSYOPS: The U.S. Government War on Americans</h3>
+          <p class="book-card-desc">Covers MKULTRA, COINTELPRO, Operation Mockingbird, and NSA mass surveillance. The secular counterpart to this presentation — proving that the state-level pharmekia apparatus (chemical mind control, population management) is not conspiracy theory. <em>It is documented history.</em></p>
+          <a href="https://play.google.com/store/audiobooks/details/Adam_hanrahan_Psyops?id=AQAAAEDqmWrZkM" class="btn-book" target="_blank" rel="noopener">Google Play Audiobook ↗</a>
+        </div>
+      </div>
+
+      <div class="cta-actions">
+        <a href="https://adamhanrahan.gumroad.com" class="btn-primary" target="_blank" rel="noopener">Browse Full Gumroad Library →</a>
+        <a href="index.html" class="btn-ghost">← Back to Author Page</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <span class="footer-logo">✦ FaithfulBooks Publishing</span>
+        <p class="footer-tagline">"Where survival isn't the victory — staying human is."</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html#about">About</a>
+        <a href="index.html#books">Books</a>
+        <a href="index.html#series">Series</a>
+        <a href="pharmekia.html">Pharmekia</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="https://adamhanrahan.gumroad.com" target="_blank" rel="noopener">Gumroad</a>
+        <a href="https://ko-fi.com/adamhanrahan" target="_blank" rel="noopener">Ko-fi</a>
+      </nav>
+      <p class="footer-copy">© 2026 Adam Joseph Hanrahan · FaithfulBooks Publishing · West Warwick, RI</p>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+
+  <script>
+    // ── Custom Cursor ──
+    const cursor = document.getElementById('cursor');
+    const trail  = document.getElementById('cursorTrail');
+    document.addEventListener('mousemove', e => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top  = e.clientY + 'px';
+      trail.style.left  = e.clientX + 'px';
+      trail.style.top   = e.clientY + 'px';
+    });
+
+    // ── Back-to-Top ──
+    const backTop = document.getElementById('backTop');
+    window.addEventListener('scroll', () => {
+      backTop.classList.toggle('visible', window.scrollY > 400);
+    });
+    backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // ── Scroll-reveal (minimal IntersectionObserver) ──
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('aos-in');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('[data-aos]').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
