@@ -15,7 +15,8 @@ if [[ "$MINUTES" != "5" && "$MINUTES" != "10" ]]; then
   exit 64
 fi
 
-readonly STARTED_AT="$(date -u +%Y%m%dT%H%M%SZ)"
+STARTED_AT="$(date -u +%Y%m%dT%H%M%SZ)"
+readonly STARTED_AT
 readonly OUTPUT_ROOT="${HOME}/incident-evidence"
 readonly EVIDENCE_DIR="${OUTPUT_ROOT}/incident-${STARTED_AT}"
 readonly ARCHIVE="${OUTPUT_ROOT}/incident-${STARTED_AT}.tar.gz"
@@ -70,7 +71,7 @@ for ((snapshot = 1; snapshot <= SNAPSHOTS; snapshot++)); do
 done
 
 (
-  cd "$OUTPUT_ROOT"
+  cd "$OUTPUT_ROOT" || exit 1
   tar -czf "$ARCHIVE" "$(basename "$EVIDENCE_DIR")"
 )
 
