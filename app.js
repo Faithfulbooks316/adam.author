@@ -419,9 +419,39 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 })();
 
+/* ══════════════════════════════════════════════════
+   10. GATED READER ACCESS — Netlify Forms submission
+══════════════════════════════════════════════════ */
+(function initReaderSignup() {
+  const form = document.querySelector('.reader-access-form');
+  const success = document.querySelector('.reader-access-success');
+  const status = form ? form.querySelector('.form-status') : null;
+  if (!form || !success || !status) return;
+
+  form.addEventListener('submit', async event => {
+    event.preventDefault();
+    status.textContent = 'Sending…';
+    form.querySelector('button').disabled = true;
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form)).toString()
+      });
+      if (!response.ok) throw new Error('Signup request failed');
+      form.hidden = true;
+      success.hidden = false;
+    } catch (error) {
+      status.textContent = 'We couldn’t complete the signup. Please try again.';
+      form.querySelector('button').disabled = false;
+    }
+  });
+})();
+
 
 /* ══════════════════════════════════════════════════
-   10. INIT — trigger initial state
+   11. INIT — trigger initial state
 ══════════════════════════════════════════════════ */
 document.addEventListener('DOMContentLoaded', () => {
   // Show all book cards by default
